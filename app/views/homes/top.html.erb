@@ -1,13 +1,27 @@
+
 <h1>
   ようこそ
   <strong>Bookers</strong>
   へ!
 </h1>
-<p>
-  <strong>Bookers</strong>
-  では、さまざまな書籍に関するあなたの意見や
-  <p>印象を共有し交換することができます</p>
-  <P>
-    <%= link_to 'Start', books_path %>
-  </P>
-</p>
+<p><strong>Bookers</strong>では、さまざまな書籍に関するあなたの意見や<br>
+  印象を共有し交換することができます!</p>
+<%= link_to 'Start', books_path %>
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_zpymeot9.json"  background="transparent"  speed="0.1"  style="width: 300px; height: 300px;"    autoplay></lottie-player>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <% @books.each do |book| %>
+      <div class="swiper-slide">
+        <%= attachment_image_tag book, :image, :fill, 330, 300, fallback: "swiper1.jpg", class: "card-img-top p-2", size: "350x300" %>
+      </div>
+    <% end %>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+</div>

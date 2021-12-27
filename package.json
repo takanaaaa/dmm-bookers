@@ -1,5 +1,8 @@
 {
   "name": "Bookers",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "lottie-web": "^5.8.1",
+    "swiper": "^7.3.4"
+  }
 }
